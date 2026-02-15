@@ -32,9 +32,11 @@
         input, textarea, select { width: 100%; padding: 0.8rem; border-radius: 5px; border: 1px solid #444; background: #1a1a1a; color: #fff; font-size: 1rem; box-sizing: border-box; }
         input:focus, select:focus, textarea:focus { border-color: #d4af37; outline: none; }
         
-        /* Button Schrift vergrößert */
         .btn-submit { grid-column: span 2; background: #d4af37; color: #1a1a1a; padding: 1.5rem; border: none; border-radius: 5px; font-weight: 900; cursor: pointer; font-size: 1.5rem; text-transform: uppercase; transition: transform 0.2s, background 0.3s; margin-top: 1rem; }
         .btn-submit:hover { background: #b8962e; transform: scale(1.02); }
+        .btn-submit:disabled { background: #555; cursor: not-allowed; }
+
+        #status { text-align: center; grid-column: span 2; font-weight: bold; margin-top: 10px; }
 
         .footer { text-align: center; padding: 2rem; font-size: 0.9rem; color: #666; border-top: 1px solid #444; }
         
@@ -85,8 +87,7 @@
 
                 <p>Fordern Sie Ihr persönliches Exemplar jetzt über dieses Formular <strong>kostenfrei</strong> an:</p>
                 
-                <form action="https://formspree.io/f/xbdaopgz" method="POST">
-                    <input type="hidden" name="_next" value="https://serdaenterprise.github.io/ki4you/dein-pv-ratgeber-download.html">
+                <form id="pv-form" action="https://formspree.io/f/xbdaopgz" method="POST">
                     <input type="hidden" name="_subject" value="KOSTENLOSE Ratgeber-Anforderung">
 
                     <div>
@@ -131,10 +132,11 @@
 
                     <div class="full-width">
                         <label>Ihre Anmerkung zum Projekt (optional):</label>
-                        <textarea name="Nachricht" rows="3" placeholder="Gibt es Besonderheiten, die wir wissen sollten?"></textarea>
+                        <textarea name="Nachricht" rows="3" placeholder="Gibt es Besonderheiten?"></textarea>
                     </div>
 
-                    <button type="submit" class="btn-submit">JETZT KOSTENLOS ANFORDERN</button>
+                    <button type="submit" id="submit-btn" class="btn-submit">JETZT KOSTENLOS ANFORDERN</button>
+                    <p id="status" style="display:none; color: #d4af37;">Wird gesendet... Bitte warten.</p>
                 </form>
             </div>
         </main>
@@ -143,5 +145,41 @@
     <div class="footer">
         &copy; 2026 KI-Anwendungen4You - Roberto Serb
     </div>
+
+    <script>
+        const form = document.getElementById("pv-form");
+        const status = document.getElementById("status");
+        const btn = document.getElementById("submit-btn");
+
+        form.addEventListener("submit", async function(event) {
+            event.preventDefault(); 
+            btn.disabled = true;
+            btn.innerText = "WIRD GESENDET...";
+            status.style.display = "block";
+            
+            const data = new FormData(event.target);
+            
+            fetch(event.target.action, {
+                method: form.method,
+                body: data,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    // Erfolgreich gesendet -> Weiterleitung zur geheimen Seite
+                    window.location.href = "dein-pv-ratgeber-download.html";
+                } else {
+                    status.innerHTML = "Fehler: Bitte prüfen Sie Ihre Eingaben.";
+                    btn.disabled = false;
+                    btn.innerText = "JETZT KOSTENLOS ANFORDERN";
+                }
+            }).catch(error => {
+                status.innerHTML = "Verbindungsfehler. Bitte versuchen Sie es später erneut.";
+                btn.disabled = false;
+                btn.innerText = "JETZT KOSTENLOS ANFORDERN";
+            });
+        });
+    </script>
 </body>
 </html>
