@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PV-Planung mit KI - Leads & Beratung</title>
+    <title>PV-Analyse & Ratgeber - KI-Anwendungen4You</title>
     <style>
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; margin: 0; padding: 0; background-color: #1a1a1a; color: #eeeeee; display: flex; flex-direction: column; min-height: 100vh; }
         header { background: #2c2c2c; color: #d4af37; padding: 2rem 1rem; text-align: center; border-bottom: 3px solid #d4af37; }
@@ -16,25 +16,37 @@
         nav ul li a:hover { color: #d4af37; }
 
         .content { flex: 1; padding: 2rem; background: #1a1a1a; }
-        .container-box { background: #222; padding: 2rem; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.5); }
-        h2 { color: #d4af37; }
+        .container-box { background: #222; padding: 2.5rem; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.5); border: 1px solid #333; }
+        h2 { color: #d4af37; margin-top: 0; }
+        .highlight { color: #d4af37; font-weight: bold; }
 
-        /* Formular Styling */
-        form { display: flex; flex-direction: column; gap: 1rem; margin-top: 2rem; background: #2a2a2a; padding: 1.5rem; border-radius: 8px; border: 1px solid #d4af37; }
-        label { font-weight: bold; color: #d4af37; }
-        input, textarea, select { padding: 0.8rem; border-radius: 5px; border: 1px solid #444; background: #1a1a1a; color: #fff; font-size: 1rem; }
-        .btn-submit { background: #d4af37; color: #1a1a1a; padding: 1rem; border: none; border-radius: 5px; font-weight: bold; cursor: pointer; font-size: 1.1rem; }
-        .btn-submit:hover { background: #b8962e; }
+        /* Erweitertes Formular Styling */
+        form { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; margin-top: 2rem; background: #2a2a2a; padding: 2rem; border-radius: 8px; border: 1px solid #d4af37; }
+        .full-width { grid-column: span 2; }
+        
+        label { font-weight: bold; color: #d4af37; margin-bottom: 0.2rem; display: block; }
+        input, textarea, select { width: 100%; padding: 0.8rem; border-radius: 5px; border: 1px solid #444; background: #1a1a1a; color: #fff; font-size: 1rem; box-sizing: border-box; }
+        input:focus, select:focus, textarea:focus { border-color: #d4af37; outline: none; }
+        
+        .btn-submit { grid-column: span 2; background: #d4af37; color: #1a1a1a; padding: 1.2rem; border: none; border-radius: 5px; font-weight: bold; cursor: pointer; font-size: 1.2rem; transition: transform 0.2s, background 0.3s; margin-top: 1rem; }
+        .btn-submit:hover { background: #b8962e; transform: scale(1.02); }
 
         .footer { text-align: center; padding: 2rem; font-size: 0.9rem; color: #666; border-top: 1px solid #444; }
-        @media (max-width: 768px) { .main-wrapper { flex-direction: column; } nav { width: 100%; border-right: none; } }
+        
+        @media (max-width: 768px) { 
+            .main-wrapper { flex-direction: column; } 
+            nav { width: 100%; border-right: none; border-bottom: 1px solid #444; }
+            form { grid-template-columns: 1fr; }
+            .full-width { grid-column: span 1; }
+            .btn-submit { grid-column: span 1; }
+        }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>PV-Planung 2.0</h1>
-        <p>KI-gestützte Optimierung für Ihre Solaranlage</p>
+        <h1>PV-Planung & Insider-Ratgeber</h1>
+        <p>Sichern Sie sich wertvolles Expertenwissen für Ihr Energieprojekt</p>
     </header>
 
     <div class="main-wrapper">
@@ -51,27 +63,56 @@
 
         <main class="content">
             <div class="container-box">
-                <h2>Kostenlose Erstberatung anfordern</h2>
-                <p>Nutzen Sie die Kraft der KI für Ihre Energieunabhängigkeit. Hinterlassen Sie Ihre Daten, und ich melde mich bei Ihnen für eine erste Analyse.</p>
+                <h2>Gratis: PV-Insider-Dossier 2026 anfordern</h2>
+                <p>Hinterlassen Sie Ihre Projektdaten und erhalten Sie sofortigen Zugriff auf unseren Ratgeber <span class="highlight">"10 fatale Fehler bei PV & Wärmepumpe"</span> sowie eine unverbindliche Erst-Einschätzung.</p>
                 
-                <form action="https://formspree.io/f/YOUR_ID_HERE" method="POST">
-                    <label>Ihr Name:</label>
-                    <input type="text" name="name" placeholder="Vor- und Nachname" required>
+                <form action="https://formspree.io/f/xbdaopgz" method="POST">
+                    <div>
+                        <label>Name:</label>
+                        <input type="text" name="Name" placeholder="Vor- und Nachname" required>
+                    </div>
+                    <div>
+                        <label>E-Mail Adresse:</label>
+                        <input type="email" name="Email" placeholder="ihre@mail.de" required>
+                    </div>
+                    <div>
+                        <label>Telefonnummer:</label>
+                        <input type="tel" name="Telefon" placeholder="Für Rückfragen" required>
+                    </div>
+                    <div>
+                        <label>Beste Erreichbarkeit:</label>
+                        <select name="Erreichbarkeit">
+                            <option value="Vormittags">Vormittags</option>
+                            <option value="Mittags">Mittags</option>
+                            <option value="Nachmittags">Nachmittags</option>
+                            <option value="Abends">Abends</option>
+                        </select>
+                    </div>
 
-                    <label>E-Mail Adresse:</label>
-                    <input type="email" name="_replyto" placeholder="ihre@mail.de" required>
+                    <div class="full-width">
+                        <label>Objekt-Adresse:</label>
+                        <input type="text" name="Adresse" placeholder="Straße, Hausnummer, PLZ, Ort" required>
+                    </div>
+                    
+                    <div>
+                        <label>Sind Sie Hausbesitzer?</label>
+                        <select name="Hausbesitzer" required>
+                            <option value="">-- Bitte wählen --</option>
+                            <option value="Ja">Ja, ich bin Eigentümer</option>
+                            <option value="Nein">Nein (Mieter)</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label>Jahresstromverbrauch (ca. kWh):</label>
+                        <input type="number" name="Stromverbrauch" placeholder="z.B. 4500">
+                    </div>
 
-                    <label>Interesse an:</label>
-                    <select name="kategorie">
-                        <option value="PV-Neuanlage">PV-Neuanlage</option>
-                        <option value="Nachrüstung Speicher">Nachrüstung Speicher</option>
-                        <option value="Kombination PV & Wärmepumpe">PV & Wärmepumpe</option>
-                    </select>
+                    <div class="full-width">
+                        <label>Zusätzliche Nachricht (optional):</label>
+                        <textarea name="Nachricht" rows="3" placeholder="Besonderheiten wie geplante Wärmepumpe, E-Auto etc."></textarea>
+                    </div>
 
-                    <label>Nachricht / Objekt-Adresse:</label>
-                    <textarea name="message" rows="4" placeholder="Beschreiben Sie kurz Ihr Vorhaben..."></textarea>
-
-                    <button type="submit" class="btn-submit">Jetzt Analyse anfragen</button>
+                    <button type="submit" class="btn-submit">Jetzt Ratgeber & Analyse anfordern</button>
                 </form>
             </div>
         </main>
