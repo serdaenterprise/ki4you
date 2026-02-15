@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KI-Anwendungen4You</title>
+    <style>
+        body { font-family: 'Segoe UI', Arial, sans-serif; background-color: #0f172a; color: white; margin: 0; text-align: center; }
+        .hero { background: linear-gradient(135deg, #1e293b 0%, #0369a1 100%); padding: 60px 20px; border-bottom: 4px solid #38bdf8; }
+        .container { max-width: 800px; margin: 0 auto; padding: 40px 20px; }
+        .card { background: #1e293b; padding: 30px; border-radius: 15px; border: 1px solid #334155; box-shadow: 0 10px 20px rgba(0,0,0,0.5); }
+        .btn { display: inline-block; background: #ff9900; color: black; padding: 15px 30px; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 1.1rem; }
+        h1 { margin: 0; font-size: 2.5rem; letter-spacing: 1px; }
+        p { color: #94a3b8; line-height: 1.6; }
+    </style>
+</head>
+<body>
+
+    <div class="hero">
+        <h1>ki-anwendungen4you.de</h1>
+        <p>Künstliche Intelligenz für Deinen Erfolg</p>
+    </div>
+
+    <div class="container">
+        <div class="card">
+            <h2 style="color: #38bdf8;">Demnächst: Meine KI-Bücher</h2>
+            <p>Hier erfährst Du bald alles über meine neuesten Veröffentlichungen und die besten KI-Tools auf Amazon.</p>
+            <br>
+            <a href="mailto:info@ki-anwendungen4you.de" class="btn">Kontakt aufnehmen</a>
+        </div>
+        
+        <p style="margin-top: 50px; opacity: 0.5;">&copy; 2026 ki-anwendungen4you.de</p>
+    </div>
+
+</body>
+</html>
