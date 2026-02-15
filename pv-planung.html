@@ -1,9 +1,8 @@
-<!DOCTYPE html>
 <html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PV-Analyse & Ratgeber - KI-Anwendungen4You</title>
+    <title>PV-Planung & Insider-Ratgeber - KI-Anwendungen4You</title>
     <style>
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; margin: 0; padding: 0; background-color: #1a1a1a; color: #eeeeee; display: flex; flex-direction: column; min-height: 100vh; }
         header { background: #2c2c2c; color: #d4af37; padding: 2rem 1rem; text-align: center; border-bottom: 3px solid #d4af37; }
@@ -17,11 +16,14 @@
 
         .content { flex: 1; padding: 2rem; background: #1a1a1a; }
         .container-box { background: #222; padding: 2.5rem; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.5); border: 1px solid #333; }
-        h2 { color: #d4af37; margin-top: 0; }
-        .highlight { color: #d4af37; font-weight: bold; }
+        
+        h2 { color: #d4af37; margin-top: 0; font-size: 1.8rem; }
+        .benefit-list { background: #2a2a2a; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0; border-left: 4px solid #d4af37; }
+        .benefit-list ul { margin: 0; padding-left: 1.2rem; color: #ccc; }
+        .benefit-list li { margin-bottom: 0.5rem; }
 
-        /* Erweitertes Formular Styling */
-        form { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; margin-top: 2rem; background: #2a2a2a; padding: 2rem; border-radius: 8px; border: 1px solid #d4af37; }
+        /* Formular Styling */
+        form { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; margin-top: 2rem; background: #2a2a2a; padding: 2rem; border-radius: 8px; border: 1px solid #444; }
         .full-width { grid-column: span 2; }
         
         label { font-weight: bold; color: #d4af37; margin-bottom: 0.2rem; display: block; }
@@ -45,8 +47,8 @@
 <body>
 
     <header>
-        <h1>PV-Planung & Insider-Ratgeber</h1>
-        <p>Sichern Sie sich wertvolles Expertenwissen für Ihr Energieprojekt</p>
+        <h1>PV-Planung & Experten-Wissen</h1>
+        <p>Sichern Sie sich wertvolle Planungssicherheit für Ihr Projekt</p>
     </header>
 
     <div class="main-wrapper">
@@ -63,13 +65,28 @@
 
         <main class="content">
             <div class="container-box">
-                <h2>Gratis: PV-Insider-Dossier 2026 anfordern</h2>
-                <p>Hinterlassen Sie Ihre Projektdaten und erhalten Sie sofortigen Zugriff auf unseren Ratgeber <span class="highlight">"10 fatale Fehler bei PV & Wärmepumpe"</span> sowie eine unverbindliche Erst-Einschätzung.</p>
+                <h2>📉 Stromkosten senken & Autarkie steigern</h2>
+                <p>Machen Sie sich unabhängig von steigenden Energiepreisen. Sichern Sie sich unseren <strong>Insider-Ratgeber 2026</strong> und erfahren Sie, worauf es bei einer modernen Solarlösung wirklich ankommt.</p>
+                
+                <p>Eine Photovoltaikanlage muss zu Ihrem Leben passen. Wer heute vorausschauend plant, hält sich alle Türen offen und vermeidet teure Nachrüstungen in der Zukunft.</p>
+
+                <div class="benefit-list">
+                    <ul>
+                        <li><strong>Eigenverbrauch optimieren:</strong> Wie Sie mehr von Ihrem eigenen Strom nutzen und Zukaufkosten minimieren.</li>
+                        <li><strong>Zukunftssicherheit prüfen:</strong> Worauf Sie beim Wechselrichter und Speicher achten müssen, um flexibel zu bleiben.</li>
+                        <li><strong>Angebote vergleichen:</strong> Mit unserer Checkliste erkennen Sie sofort die Qualität technischer Komponenten.</li>
+                    </ul>
+                </div>
+
+                <p>Fordern Sie Ihr persönliches Exemplar jetzt über dieses Formular an:</p>
                 
                 <form action="https://formspree.io/f/xbdaopgz" method="POST">
+                    <input type="hidden" name="_next" value="https://serdaenterprise.github.io/ki4you/dein-pv-ratgeber-download.html">
+                    <input type="hidden" name="_subject" value="Neue Projektanfrage & Ratgeber-Anforderung">
+
                     <div>
-                        <label>Name:</label>
-                        <input type="text" name="Name" placeholder="Vor- und Nachname" required>
+                        <label>Vor- und Nachname:</label>
+                        <input type="text" name="Name" placeholder="Ihr Name" required>
                     </div>
                     <div>
                         <label>E-Mail Adresse:</label>
@@ -77,7 +94,7 @@
                     </div>
                     <div>
                         <label>Telefonnummer:</label>
-                        <input type="tel" name="Telefon" placeholder="Für Rückfragen" required>
+                        <input type="tel" name="Telefon" placeholder="Für Rückfragen zum Projekt" required>
                     </div>
                     <div>
                         <label>Beste Erreichbarkeit:</label>
@@ -108,11 +125,11 @@
                     </div>
 
                     <div class="full-width">
-                        <label>Zusätzliche Nachricht (optional):</label>
-                        <textarea name="Nachricht" rows="3" placeholder="Besonderheiten wie geplante Wärmepumpe, E-Auto etc."></textarea>
+                        <label>Ihre Anmerkung zum Projekt (optional):</label>
+                        <textarea name="Nachricht" rows="3" placeholder="Gibt es Besonderheiten, die wir wissen sollten?"></textarea>
                     </div>
 
-                    <button type="submit" class="btn-submit">Jetzt Ratgeber & Analyse anfordern</button>
+                    <button type="submit" class="btn-submit">Ratgeber jetzt anfordern</button>
                 </form>
             </div>
         </main>
