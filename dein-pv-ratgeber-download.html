@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ihr Download - Expertenratgeber</title>
+    <title>Ihr Download - PV-Expertenratgeber</title>
     <style>
-        /* Hier stellen wir den Hintergrund ein, damit es wie deine Website aussieht */
+        /* Hintergrund-Design passend zur Website */
         body { 
-            font-family: 'Segoe UI', Arial, sans-serif; 
-            background-color: #f0f2f5; /* Ein helles Grau, passend zur Hauptseite */
-            background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            background-color: #f4f7f6; 
+            background-image: radial-gradient(#d1d9e0 0.5px, #f4f7f6 0.5px);
+            background-size: 20px 20px; /* Dezentes Punkt-Muster */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -18,58 +19,49 @@
         }
         .container { 
             background: white; 
-            max-width: 500px; 
-            padding: 40px; 
-            border-radius: 15px; 
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1); 
+            max-width: 550px; 
+            padding: 50px; 
+            border-radius: 20px; 
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1); 
             text-align: center;
+            border: 1px solid #e1e8ed;
         }
-        h1 { color: #2c3e50; font-size: 24px; }
-        p { color: #576574; margin-bottom: 30px; }
+        h1 { color: #2c3e50; font-size: 26px; margin-bottom: 15px; }
+        p { color: #576574; font-size: 1.1em; margin-bottom: 35px; }
         .download-btn { 
             background-color: #e67e22; 
             color: white; 
-            padding: 15px 30px; 
+            padding: 20px 40px; 
             text-decoration: none; 
-            border-radius: 8px; 
+            border-radius: 10px; 
             font-weight: bold; 
+            font-size: 1.2em;
             display: inline-block;
-            border: none;
-            cursor: pointer;
+            transition: transform 0.2s, background 0.3s;
         }
-        #error-message { color: #e74c3c; margin-top: 20px; display: none; font-weight: bold; }
+        .download-btn:hover { 
+            background-color: #d35400; 
+            transform: translateY(-2px);
+        }
+        .footer-note { margin-top: 40px; font-size: 0.9em; color: #95a5a6; }
     </style>
 </head>
 <body>
 
 <div class="container">
     <h1>Vielen Dank!</h1>
-    <p>Ihr Experten-Ratgeber für PV und Wärmepumpen ist bereit.</p>
+    <p>Ihr Experten-Ratgeber zur Profitabilität von PV-Anlagen steht bereit.</p>
     
-    <a href="solar-ratgeber-2026.pdf" id="downloadLink" download class="download-btn">
+    <a href="solar-ratgeber-2026.pdf.pdf" download="Solar-Ratgeber-2026.pdf" class="download-btn">
         Ratgeber jetzt herunterladen
     </a>
 
-    <div id="error-message">Datei nicht gefunden. Bitte prüfen Sie den Dateinamen auf GitHub.</div>
-
-    <div style="margin-top: 30px; font-size: 12px; color: #bdc3c7;">
-        © 2026 SERDA Enterprise - Fokus auf seriöse Profitabilität.
+    <div class="footer-note">
+        © 2026 SERDA Enterprise<br>
+        Seriöse Beratung für nachhaltige Energie.
     </div>
 </div>
 
-<script>
-    // Diese Funktion prüft, ob die Datei wirklich da ist
-    document.getElementById('downloadLink').onclick = function(e) {
-        var http = new XMLHttpRequest();
-        http.open('HEAD', this.href, false);
-        http.send();
-        if (http.status === 404) {
-            e.preventDefault();
-            document.getElementById('error-message').style.display = 'block';
-            alert("Fehler: Die Datei 'solar-ratgeber-2026.pdf' wurde auf dem Server nicht gefunden. Bitte prüfen Sie, ob der Name auf GitHub exakt so geschrieben ist!");
-        }
-    };
-</script>
-
 </body>
 </html>
+
