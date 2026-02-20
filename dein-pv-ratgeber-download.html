@@ -2,84 +2,32 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <meta name="robots" content="noindex, nofollow">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ihr Ratgeber ist bereit - KI-Anwendungen4You</title>
+    <title>Ihr Download - PV-Expertenratgeber 2026</title>
     <style>
-        body { font-family: 'Segoe UI', Tahoma, sans-serif; background-color: #1a1a1a; color: #eeeeee; text-align: center; display: flex; flex-direction: column; min-height: 100vh; margin: 0; }
-        .container { max-width: 750px; margin: 60px auto; padding: 3rem; background: #222; border-radius: 15px; border: 1px solid #d4af37; box-shadow: 0 10px 30px rgba(0,0,0,0.7); }
-        
-        h2 { color: #d4af37; font-size: 2.2rem; margin-bottom: 1rem; }
-        .success-badge { background: rgba(212, 175, 55, 0.2); color: #d4af37; padding: 0.5rem 1rem; border-radius: 50px; display: inline-block; font-weight: bold; margin-bottom: 2rem; border: 1px solid #d4af37; }
-        
-        p { line-height: 1.6; font-size: 1.1rem; color: #ccc; }
-        .highlight { color: #fff; font-weight: bold; }
-
-        /* Der neue "schöne" Download-Button */
-        .download-area { margin: 3rem 0; padding: 2rem; background: #2a2a2a; border-radius: 12px; border: 1px dashed #444; }
-        
-        .btn-download {
-            display: inline-block;
-            background: linear-gradient(135deg, #d4af37 0%, #f2d06b 100%);
-            color: #1a1a1a;
-            padding: 1.5rem 3rem;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: 900;
-            font-size: 1.3rem;
-            text-transform: uppercase;
-            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
-            transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
-        }
-
-        .btn-download:hover {
-            transform: translateY(-3px) scale(1.03);
-            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.6);
-            background: linear-gradient(135deg, #f2d06b 0%, #d4af37 100%);
-        }
-
-        .btn-download span { display: block; font-size: 0.8rem; font-weight: normal; margin-top: 5px; opacity: 0.8; }
-
-        .footer { padding: 2rem; color: #555; font-size: 0.85rem; margin-top: auto; }
-
-        /* Sicherheit: Schickt Leute weg, die die URL direkt raten */
-        script { display: none; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background-color: #f9f9f9; text-align: center; padding: 50px; }
+        .container { background: white; max-width: 600px; margin: 0 auto; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        h1 { color: #2c3e50; margin-bottom: 10px; }
+        p { color: #7f8c8d; margin-bottom: 30px; }
+        .download-btn { background-color: #e67e22; color: white; padding: 18px 30px; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 1.1em; display: inline-block; transition: background 0.3s; }
+        .download-btn:hover { background-color: #d35400; }
+        .footer-note { margin-top: 40px; font-size: 0.85em; color: #bdc3c7; }
     </style>
-    <script>
-        window.onload = function() {
-            if (document.referrer === "" || !document.referrer.includes("pv-planung")) {
-                // Falls jemand die Seite direkt aufruft, zur Startseite leiten
-                window.location.href = "index.html";
-            }
-        }
-    </script>
 </head>
 <body>
 
-    <div class="container">
-        <div class="success-badge">✓ Aktion erfolgreich</div>
-        <h2>Fast geschafft! Ihr persönlicher Ratgeber ist bereit.</h2>
-        
-        <p>Herzlichen Glückwunsch! Sie gehören zu den ersten Anfragen und erhalten das <span class="highlight">PV-Insider-Dossier 2026 (im Wert von 19,90 €)</span> hiermit komplett kostenfrei.</p>
-        
-        <div class="download-area">
-            <p style="margin-top:0;">Ihr Dokument wurde freigeschaltet:</p>
-            <a href="ratgeber.pdf" class="btn-download" target="_blank">
-                ⬇️ Jetzt Ratgeber herunterladen
-                <span>PDF-Dokument (ca. 1,2 MB)</span>
-            </a>
-        </div>
-        
-        <p>Ich habe Ihre Projektinformationen erhalten und werde diese zeitnah sichten. Falls wichtige Details für eine erste Einschätzung fehlen, melde ich mich wie gewünscht bei Ihnen.</p>
-        
-        <p style="font-size: 0.9rem; font-style: italic;">Tipp: Speichern Sie das Dokument direkt nach dem Öffnen ab oder drucken Sie es für Ihr nächstes Beratungsgespräch aus.</p>
-    </div>
+<div class="container">
+    <h1>Vielen Dank für Ihr Interesse!</h1>
+    <p>Ihr Experten-Ratgeber für PV-Anlagen und Wärmepumpen steht jetzt für Sie bereit. Erfahren Sie, wie Sie Ihre Energiekosten nachhaltig senken und die Profitabilität Ihrer Anlage maximieren.</p>
+    
+    <a href="Solar-Ratgeber 2026.pdf" download class="download-btn">
+        Ratgeber jetzt als PDF speichern
+    </a>
 
-    <div class="footer">
-        &copy; 2026 KI-Anwendungen4You - Roberto Serb | <a href="impressum.html" style="color:#555;">Impressum</a>
+    <div class="footer-note">
+        © 2026 SERDA Enterprise - Fokus auf seriöse Profitabilität und Energie-Effizienz.
     </div>
+</div>
 
 </body>
 </html>
