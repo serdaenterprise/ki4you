@@ -1,63 +1,75 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ihr Download - PV-Expertenratgeber 2026</title>
+    <title>Ihr Download - Expertenratgeber</title>
     <style>
+        /* Hier stellen wir den Hintergrund ein, damit es wie deine Website aussieht */
         body { 
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-            line-height: 1.6; 
-            color: #333; 
-            background-color: #f9f9f9; 
-            text-align: center; 
-            padding: 50px; 
+            font-family: 'Segoe UI', Arial, sans-serif; 
+            background-color: #f0f2f5; /* Ein helles Grau, passend zur Hauptseite */
+            background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
         }
         .container { 
             background: white; 
-            max-width: 600px; 
-            margin: 0 auto; 
+            max-width: 500px; 
             padding: 40px; 
-            border-radius: 12px; 
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1); 
+            border-radius: 15px; 
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1); 
+            text-align: center;
         }
-        h1 { color: #2c3e50; margin-bottom: 10px; }
-        p { color: #7f8c8d; margin-bottom: 30px; }
+        h1 { color: #2c3e50; font-size: 24px; }
+        p { color: #576574; margin-bottom: 30px; }
         .download-btn { 
             background-color: #e67e22; 
             color: white; 
-            padding: 18px 30px; 
+            padding: 15px 30px; 
             text-decoration: none; 
             border-radius: 8px; 
             font-weight: bold; 
-            font-size: 1.1em; 
-            display: inline-block; 
-            transition: background 0.3s; 
+            display: inline-block;
+            border: none;
+            cursor: pointer;
         }
-        .download-btn:hover { 
-            background-color: #d35400; 
-        }
-        .footer-note { 
-            margin-top: 40px; 
-            font-size: 0.85em; 
-            color: #bdc3c7; 
-        }
+        #error-message { color: #e74c3c; margin-top: 20px; display: none; font-weight: bold; }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <h1>Vielen Dank für Ihr Interesse!</h1>
-    <p>Ihr Experten-Ratgeber für PV-Anlagen und Wärmepumpen steht jetzt für Sie bereit. Erfahren Sie, wie Sie Ihre Energiekosten nachhaltig senken und die Profitabilität Ihrer Anlage maximieren.</p>
+    <h1>Vielen Dank!</h1>
+    <p>Ihr Experten-Ratgeber für PV und Wärmepumpen ist bereit.</p>
     
-    <a href="solar-ratgeber-2026.pdf" download class="download-btn">
-        Ratgeber jetzt als PDF speichern
+    <a href="solar-ratgeber-2026.pdf" id="downloadLink" download class="download-btn">
+        Ratgeber jetzt herunterladen
     </a>
 
-    <div class="footer-note">
-        © 2026 SERDA Enterprise - Fokus auf seriöse Profitabilität und Energie-Effizienz.
+    <div id="error-message">Datei nicht gefunden. Bitte prüfen Sie den Dateinamen auf GitHub.</div>
+
+    <div style="margin-top: 30px; font-size: 12px; color: #bdc3c7;">
+        © 2026 SERDA Enterprise - Fokus auf seriöse Profitabilität.
     </div>
 </div>
+
+<script>
+    // Diese Funktion prüft, ob die Datei wirklich da ist
+    document.getElementById('downloadLink').onclick = function(e) {
+        var http = new XMLHttpRequest();
+        http.open('HEAD', this.href, false);
+        http.send();
+        if (http.status === 404) {
+            e.preventDefault();
+            document.getElementById('error-message').style.display = 'block';
+            alert("Fehler: Die Datei 'solar-ratgeber-2026.pdf' wurde auf dem Server nicht gefunden. Bitte prüfen Sie, ob der Name auf GitHub exakt so geschrieben ist!");
+        }
+    };
+</script>
 
 </body>
 </html>
