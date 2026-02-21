@@ -3,87 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KI-Anwendungen4You - Intelligente Lösungen für 2026</title>
+    <title>KI-Anwendungen4You | Technik & Profitabilität</title>
     <style>
-        body { font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6; margin: 0; padding: 0; background-color: #1a1a1a; color: #eeeeee; }
-        header { background: #2c2c2c; color: #d4af37; padding: 2rem 1rem; text-align: center; border-bottom: 3px solid #d4af37; }
-        .status-badge { background: #d4af37; color: #1a1a1a; padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; font-weight: bold; text-transform: uppercase; }
+        body { font-family: 'Segoe UI', sans-serif; line-height: 1.6; margin: 0; background-color: #1a1a1a; color: #eeeeee; display: flex; min-height: 100vh; }
         
-        .main-wrapper { display: flex; max-width: 1200px; margin: auto; width: 100%; min-height: 80vh; }
-        nav { width: 250px; background: #222; padding: 2rem; border-right: 1px solid #444; }
-        nav h3 { color: #d4af37; border-bottom: 1px solid #444; padding-bottom: 10px; }
+        /* Navigation links */
+        nav { width: 250px; background: #222; padding: 2rem; border-right: 1px solid #444; position: sticky; top: 0; height: 100vh; }
+        nav h3 { color: #d4af37; border-bottom: 1px solid #d4af37; padding-bottom: 5px; margin-bottom: 1.5rem; }
         nav ul { list-style: none; padding: 0; }
-        nav ul li { margin-bottom: 1rem; }
-        nav ul li a { color: #eee; text-decoration: none; font-weight: bold; }
-        nav ul li a:hover { color: #d4af37; }
-
-        .content { flex: 1; padding: 2.5rem; }
-        .hero { background: #222; padding: 2rem; border-radius: 10px; border: 1px solid #333; margin-bottom: 2rem; }
+        nav ul li { margin-bottom: 1.2rem; }
+        nav ul li a { color: #eee; text-decoration: none; font-weight: bold; transition: 0.3s; }
+        nav ul li a:hover { color: #d4af37; padding-left: 5px; }
         
-        /* Buch-Sektion Styling */
-        .book-promo { display: flex; background: #2a2a2a; border: 1px solid #d4af37; border-radius: 10px; padding: 1.5rem; align-items: center; gap: 2rem; margin-top: 2rem; }
-        .book-image { width: 150px; height: 220px; background: #333; display: flex; align-items: center; text-align: center; border-radius: 5px; border: 1px solid #444; flex-shrink: 0; overflow: hidden; }
-        .book-image img { width: 100%; height: 100%; object-fit: cover; }
-        .book-info h3 { color: #d4af37; margin-top: 0; }
-        .amazon-btn { display: inline-block; background: #ff9900; color: #000; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold; transition: background 0.3s; }
-        .amazon-btn:hover { background: #e68a00; }
+        /* Hauptinhalt */
+        .main-content { flex: 1; padding: 3rem; max-width: 900px; margin: 0 auto; }
+        .intro-section { border-bottom: 1px solid #333; margin-bottom: 3rem; padding-bottom: 2rem; }
+        h1, h2 { color: #d4af37; }
+        .intro-text { font-size: 1.1rem; color: #ccc; font-style: italic; }
 
-        .affiliate-note { font-size: 0.8rem; color: #888; margin-top: 1rem; font-style: italic; }
-        .footer { text-align: center; padding: 2rem; color: #666; font-size: 0.9rem; border-top: 1px solid #444; }
+        /* Blog-Struktur */
+        .blog-post { background: #222; padding: 2rem; border-radius: 10px; border: 1px solid #333; margin-bottom: 3rem; position: relative; }
+        .blog-post h2 { margin-top: 0; font-size: 1.8rem; }
+        .blog-meta { font-size: 0.8rem; color: #666; margin-bottom: 1rem; }
+        
+        /* Affiliate-Link Design */
+        .affiliate-link { display: inline-block; background: rgba(212, 175, 55, 0.1); border: 1px solid #d4af37; color: #d4af37; padding: 8px 15px; border-radius: 5px; text-decoration: none; margin: 15px 0; font-size: 0.9rem; }
+        .affiliate-link:hover { background: #d4af37; color: #1a1a1a; }
 
-        @media (max-width: 768px) { .main-wrapper { flex-direction: column; } nav { width: 100%; border-right: none; } .book-promo { flex-direction: column; text-align: center; } }
+        /* Call to Action (Buch/Ratgeber) */
+        .cta-box { background: #2c2c2c; border-left: 5px solid #d4af37; padding: 1.5rem; margin-top: 20px; }
+        .cta-box a { color: #d4af37; font-weight: bold; text-decoration: underline; }
+
+        footer { margin-top: 5rem; padding: 2rem; text-align: center; color: #555; border-top: 1px solid #333; font-size: 0.8rem; }
     </style>
 </head>
 <body>
 
-<header>
-    <span class="status-badge">Website Under Construction</span>
-    <h1>KI-Anwendungen4You</h1>
-    <p>Innovation & Effizienz durch intelligente Systeme</p>
-</header>
-
-<div class="main-wrapper">
     <nav>
-        <h3>Navigation</h3>
+        <h3>Menü</h3>
         <ul>
             <li><a href="index.html" style="color:#d4af37;">🏠 Home</a></li>
-            <li><a href="pv-planung.html">☀️ PV-Planung</a></li>
+            <li><a href="pv-planung.html">☀️ PV-Anlagen</a></li>
             <li><a href="waermepumpen.html">🔥 Wärmepumpen</a></li>
-            <li><a href="blog.html">✍️ KI-Blog</a></li>
+            <li><a href="buecher.html">📚 Meine Bücher</a></li>
             <li><a href="impressum.html">⚖️ Impressum</a></li>
         </ul>
     </nav>
 
-    <main class="content">
-        <div class="hero">
-            <h2>Willkommen bei Ihrem Experten für die Zukunft</h2>
-            <p>Wir arbeiten aktuell mit Hochdruck an unserem neuen Portal. Hier finden Sie bald umfassende Ratgeber zu Photovoltaik, Wärmepumpen und KI-gestützter Haussteuerung.</p>
-        </div>
-
-        <div class="book-promo">
-            <div class="book-image">
-                <img src="https://m.media-amazon.com/images/I/71WpXhH0JIL._SY425_.jpg" alt="Buchcover">
+    <main class="main-content">
+        <section class="intro-section">
+            <h1>KI-Anwendungen4You</h1>
+            <div class="intro-text">
+                <p>Von der klassischen Recherche in <strong>Bibliotheken</strong> über die Informationsflut bei <strong>Google</strong> hin zur gezielten Anwendung durch <strong>KI</strong>.</p>
+                <p>Wir nutzen moderne Technologie als Filter, um fundiertes Expertenwissen direkt in die Praxis umzusetzen – effizient, profitabel und ohne Umwege.</p>
             </div>
-            <div class="book-info">
-                <h3>Neuerscheinung: Mein aktuelles Buch</h3>
-                <p>Entdecken Sie praxisnahe Strategien und Insider-Wissen. Jetzt direkt auf Amazon erhältlich.</p>
-                <a href="https://amzn.to/46THXng" target="_blank" class="amazon-btn">Auf Amazon ansehen</a>
-                <p class="affiliate-note">Als Amazon-Partner verdiene ich an qualifizierten Verkäufen.</p>
-            </div>
-        </div>
+        </section>
 
-        <div style="margin-top: 3rem;">
-            <h3>Was Sie hier erwartet:</h3>
-            <p>✅ Unabhängige Kaufberatung für Solarsysteme (ohne Verkäufer-Latein)<br>
-               ✅ Strategien zur Nutzung dynamischer Stromtarife<br>
-               ✅ Fachwissen zu Wärmepumpen-Effizienz</p>
-        </div>
+        <article class="blog-post">
+            <div class="blog-meta">Gepostet am 21. Februar 2026 | Thema: Photovoltaik</div>
+            <h2>Titel deines ersten Blogs</h2>
+            <p>Hier schreibst du deinen kurzen Text zum Thema. Direkt auf den Punkt, so wie du es magst.</p>
+            
+            <a href="DEIN-AMAZON-LINK" class="affiliate-link">🛒 Empfehlung: Passendes Zubehör auf Amazon prüfen</a>
+
+            <div class="cta-box">
+                📖 <strong>Passend dazu:</strong> Mein Solarratgeber 2026. <br>
+                Aktuell für meine Leser kostenlos erhältlich: <a href="pv-planung.html">Jetzt hier herunterladen</a>.
+            </div>
+        </article>
+
+        <footer>
+            &copy; 2026 KI-Anwendungen4You - Roberto Serb<br>
+            Seriöse Profitabilität & Technologische Effizienz.
+        </footer>
     </main>
-</div>
-
-<div class="footer">
-    &copy; 2026 KI-Anwendungen4You - Roberto Serb | <a href="impressum.html" style="color:#666;">Impressum & Datenschutz</a>
-</div>
 
 </body>
 </html>
