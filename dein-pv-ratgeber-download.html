@@ -1,28 +1,34 @@
 <!DOCTYPE html>
-
 <html lang="de">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ihr Download - PV-Expertenratgeber</title>
-<style>
-body { font-family: 'Segoe UI', sans-serif; background-color: #f4f7f6; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
-.container { background: white; max-width: 550px; padding: 50px; border-radius: 20px; box-shadow: 0 15px 35px rgba(0,0,0,0.1); text-align: center; border: 1px solid #e1e8ed; }
-h1 { color: #2c3e50; font-size: 26px; }
-p { color: #576574; font-size: 1.1em; margin-bottom: 35px; }
-.download-btn { background-color: #e67e22; color: white; padding: 20px 40px; text-decoration: none; border-radius: 10px; font-weight: bold; display: inline-block; }
-.footer-note { margin-top: 40px; font-size: 0.9em; color: #bdc3c7; }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ihr Download - PV-Expertenratgeber</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #1a1a1a; color: #eeeeee; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; }
+        .container { background: #222; max-width: 550px; padding: 50px; border-radius: 20px; box-shadow: 0 15px 35px rgba(0,0,0,0.5); text-align: center; border: 1px solid #333; }
+        h1 { color: #d4af37; font-size: 26px; }
+        p { color: #ccc; font-size: 1.1em; margin-bottom: 35px; }
+        .download-btn { background-color: #d4af37; color: #1a1a1a; padding: 20px 40px; text-decoration: none; border-radius: 10px; font-weight: bold; display: inline-block; transition: transform 0.2s; }
+        .download-btn:hover { background-color: #b8962e; transform: scale(1.05); }
+        .back-link { display: block; margin-top: 25px; color: #d4af37; text-decoration: none; font-size: 0.9em; font-weight: bold; }
+        .back-link:hover { text-decoration: underline; }
+        .footer-note { margin-top: 40px; font-size: 0.8em; color: #666; border-top: 1px solid #444; padding-top: 20px; }
+    </style>
 </head>
 <body>
-<div class="container">
-<h1>Vielen Dank für Ihr Vertrauen!</h1>
-<p>Ihr Experten-Ratgeber zur Profitabilität von PV-Anlagen steht jetzt zum Download bereit.</p>
-<a href="solar.ratgeber.2026.pdf" download="Solar-Ratgeber-2026.pdf" class="download-btn">Ratgeber jetzt herunterladen (PDF)</a>
-<div class="footer-note">© 2026 SERDA Enterprise
-
-
-Fokus auf seriöse Profitabilität.</div>
-</div>
+    <div class="container">
+        <h1>Vielen Dank für Ihr Vertrauen!</h1>
+        <p>Ihr Experten-Ratgeber zur Profitabilität von PV-Anlagen steht jetzt zum Download bereit.</p>
+        
+        <a href="solar.ratgeber.2026.pdf" download="Solar-Ratgeber-2026.pdf" class="download-btn">Ratgeber jetzt herunterladen (PDF)</a>
+        
+        <a href="index.html" class="back-link">← Zurück zur Website</a>
+        
+        <div class="footer-note">
+            © 2026 SERDA Enterprise<br>
+            Fokus auf seriöse Profitabilität und Kosteneffizienz.
+        </div>
+    </div>
 </body>
 </html>
