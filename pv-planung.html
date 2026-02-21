@@ -3,93 +3,184 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PV-Planung 2026 - Experten-Ratgeber | KI4YOU</title>
-    <link rel="stylesheet" href="style.css">
+    <title>PV-Planung & Experten-Wissen - KI-Anwendungen4You</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; margin: 0; padding: 0; background-color: #1a1a1a; color: #eeeeee; display: flex; flex-direction: column; min-height: 100vh; }
+        header { background: #2c2c2c; color: #d4af37; padding: 2rem 1rem; text-align: center; border-bottom: 3px solid #d4af37; }
+        .main-wrapper { display: flex; flex: 1; max-width: 1200px; margin: auto; width: 100%; }
+        nav { width: 250px; background: #222; padding: 2rem; border-right: 1px solid #444; }
+        nav h3 { color: #d4af37; font-size: 1.2rem; margin-bottom: 1rem; border-bottom: 1px solid #d4af37; padding-bottom: 5px; }
+        nav ul { list-style: none; padding: 0; }
+        nav ul li { margin-bottom: 1rem; }
+        nav ul li a { color: #eeeeee; text-decoration: none; font-weight: bold; }
+        nav ul li a:hover { color: #d4af37; }
+
+        .content { flex: 1; padding: 2rem; background: #1a1a1a; }
+        .container-box { background: #222; padding: 2.5rem; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.5); border: 1px solid #333; }
+        
+        h2 { color: #d4af37; margin-top: 0; font-size: 1.8rem; }
+        .benefit-list { background: #2a2a2a; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0; border-left: 4px solid #d4af37; }
+        .benefit-list ul { margin: 0; padding-left: 1.2rem; color: #ccc; }
+        .benefit-list li { margin-bottom: 0.5rem; }
+
+        .highlight-box { background: rgba(212, 175, 55, 0.1); border: 1px solid #d4af37; padding: 1rem; border-radius: 8px; margin: 1.5rem 0; text-align: center; color: #d4af37; font-weight: bold; }
+
+        form { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; margin-top: 2rem; background: #2a2a2a; padding: 2rem; border-radius: 8px; border: 1px solid #444; }
+        .full-width { grid-column: span 2; }
+        
+        label { font-weight: bold; color: #d4af37; margin-bottom: 0.2rem; display: block; }
+        input, textarea, select { width: 100%; padding: 0.8rem; border-radius: 5px; border: 1px solid #444; background: #1a1a1a; color: #fff; font-size: 1rem; box-sizing: border-box; }
+        input:focus, select:focus, textarea:focus { border-color: #d4af37; outline: none; }
+        
+        .btn-submit { grid-column: span 2; background: #d4af37; color: #1a1a1a; padding: 1.5rem; border: none; border-radius: 5px; font-weight: 900; cursor: pointer; font-size: 1.5rem; text-transform: uppercase; transition: transform 0.2s, background 0.3s; margin-top: 1rem; }
+        .btn-submit:hover { background: #b8962e; transform: scale(1.02); }
+        .btn-submit:disabled { background: #555; cursor: not-allowed; }
+
+        #status { text-align: center; grid-column: span 2; font-weight: bold; margin-top: 10px; }
+
+        .footer { text-align: center; padding: 2rem; font-size: 0.9rem; color: #666; border-top: 1px solid #444; }
+        
+        @media (max-width: 768px) { 
+            .main-wrapper { flex-direction: column; } 
+            nav { width: 100%; border-right: none; border-bottom: 1px solid #444; }
+            form { grid-template-columns: 1fr; }
+            .full-width { grid-column: span 1; }
+            .btn-submit { grid-column: span 1; font-size: 1.2rem; }
+        }
+    </style>
 </head>
 <body>
 
     <header>
-        <nav>
-            <div class="logo">KI4YOU</div>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="pv-planung.html" class="active">PV-Planung</a></li>
-                <li><a href="waermepumpe.html">Wärmepumpen</a></li>
-            </ul>
-        </nav>
+        <h1>PV-Planung & Experten-Wissen</h1>
+        <p>Sichern Sie sich wertvolle Planungssicherheit für Ihr Projekt</p>
     </header>
 
-    <main>
-        <section style="max-width: 850px; margin: 40px auto; padding: 20px; line-height: 1.6; font-family: sans-serif;">
-            <h1 style="color: #2c3e50; border-bottom: 3px solid #e67e22; padding-bottom: 10px;">Der PV-Expertenratgeber 2026: In 11 Kapiteln zur optimalen Anlage</h1>
-            
-            <p style="font-size: 1.15em; font-weight: bold; color: #2c3e50; margin-top: 25px;">Vermeiden Sie teure Planungsfehler und setzen Sie auf echte Kosteneffizienz.</p>
-            
-            <p>Dieser Ratgeber führt Sie Schritt für Schritt durch die komplexe Welt der Photovoltaik. Erfahren Sie auf Basis von 11 Fachkapiteln, wie Sie Ihr Projekt zum Erfolg führen und maximale Profitabilität erzielen.</p>
+    <div class="main-wrapper">
+        <nav>
+            <h3>Navigation</h3>
+            <ul>
+                <li><a href="index.html">🏠 Home</a></li>
+                <li><a href="pv-planung.html" style="color:#d4af37;">☀️ PV-Planung</a></li>
+                <li><a href="waermepumpen.html">🔥 Wärmepumpen</a></li>
+                <li><a href="blog.html">✍️ KI-Blog</a></li>
+                <li><a href="impressum.html">⚖️ Impressum</a></li>
+            </ul>
+        </nav>
 
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 15px; margin: 30px 0; background: #f9fbfd; padding: 25px; border-radius: 12px; border: 1px solid #eee;">
-                <ul style="list-style: none; padding: 0; margin: 0;">
-                    <li style="margin-bottom: 10px;">✅ <b>Kapitel 1:</b> Die Profitabilitäts-Formel</li>
-                    <li style="margin-bottom: 10px;">✅ <b>Kapitel 2:</b> Der Speicher-Check</li>
-                    <li style="margin-bottom: 10px;">✅ <b>Kapitel 3:</b> Komponenten-Qualität</li>
-                    <li style="margin-bottom: 10px;">✅ <b>Kapitel 4:</b> Dach-Potenzial-Analyse</li>
-                    <li style="margin-bottom: 10px;">✅ <b>Kapitel 5:</b> Wechselrichter & Technik</li>
-                    <li style="margin-bottom: 10px;">✅ <b>Kapitel 6:</b> Montagesysteme & Statik</li>
-                </ul>
-                <ul style="list-style: none; padding: 0; margin: 0;">
-                    <li style="margin-bottom: 10px;">✅ <b>Kapitel 7:</b> Steuern & Bürokratie 2026</li>
-                    <li style="margin-bottom: 10px;">✅ <b>Kapitel 8:</b> Eigenverbrauch-Maximierung</li>
-                    <li style="margin-bottom: 10px;">✅ <b>Kapitel 9:</b> Die Anbieter-Falle vermeiden</li>
-                    <li style="margin-bottom: 10px;">✅ <b>Kapitel 10:</b> Finanzierung & Förderung</li>
-                    <li style="margin-bottom: 10px;">✅ <b>Kapitel 11:</b> Ertragsprüfung & Wartung</li>
-                    <li style="margin-bottom: 10px;">⭐ <b>Plus:</b> Exklusive Checklisten</li>
-                </ul>
-            </div>
-
-            <div style="background-color: #fdf7f2; padding: 25px; border-radius: 12px; border-left: 6px solid #e67e22; margin-bottom: 40px;">
-                <h3 style="margin-top: 0; color: #d35400;">Sichern Sie sich Ihr Exemplar:</h3>
-                <p><strong>Variante A: Kostenloser Experten-Download</strong><br>
-                Füllen Sie das Formular aus und erhalten Sie alle 11 Kapitel sofort als PDF. Im Gegenzug leiten wir Ihre Kontaktanfrage an einen geprüften PV-Fachpartner zur Erstellung eines unverbindlichen Angebots weiter.</p>
-                <p style="margin-bottom: 0; color: #666; font-size: 0.9em;"><strong>Variante B: Kauf bei Amazon (19,99 €)</strong><br>
-                Wenn Sie Ihre Daten nicht teilen möchten, können Sie das Werk diskret als E-Book zum regulären Preis erwerben (Link wird nach Veröffentlichung aktiviert).</p>
-            </div>
-        </section>
-
-        <section id="contact-form" style="max-width: 600px; margin: 40px auto; padding: 30px; background: #fff; border-radius: 15px; border: 1px solid #ddd; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
-            <h2 style="text-align: center; color: #2c3e50;">Jetzt gratis anfordern</h2>
-            
-            <form action="https://formspree.io/f/mqaeoboa" method="POST">
-                <input type="hidden" name="_next" value="https://serdaenterprise.github.io/ki4you/dein-pv-ratgeber-download.html">
+        <main class="content">
+            <div class="container-box">
+                <h2>📉 Stromkosten senken & Autarkie steigern</h2>
+                <p>Machen Sie sich unabhängig von steigenden Energiepreisen. Sichern Sie sich unseren <strong>PV-Insider-Ratgeber 2026</strong> und erfahren Sie, worauf es bei einer modernen Solarlösung wirklich ankommt.</p>
                 
-                <div style="margin-bottom: 15px;">
-                    <label style="display: block; margin-bottom: 5px; font-weight: bold;">Name:</label>
-                    <input type="text" name="name" required style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 6px; box-sizing: border-box;">
+                <div class="highlight-box">
+                    AKTION: Die nächsten 100 Anfragen erhalten den Ratgeber (Wert: 19,90 €) komplett KOSTENLOS!
                 </div>
+
+                <div class="benefit-list">
+                    <ul>
+                        <li><strong>Eigenverbrauch optimieren:</strong> Wie Sie mehr von Ihrem eigenen Strom nutzen.</li>
+                        <li><strong>Zukunftssicherheit prüfen:</strong> Worauf Sie beim Wechselrichter und Speicher achten müssen.</li>
+                        <li><strong>Angebote vergleichen:</strong> Mit unserer Checkliste erkennen Sie sofort die Qualität technischer Komponenten.</li>
+                    </ul>
+                </div>
+
+                <p>Fordern Sie Ihr persönliches Exemplar jetzt über dieses Formular <strong>kostenfrei</strong> an:</p>
                 
-                <div style="margin-bottom: 15px;">
-                    <label style="display: block; margin-bottom: 5px; font-weight: bold;">E-Mail:</label>
-                    <input type="email" name="email" required style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 6px; box-sizing: border-box;">
-                </div>
+                <form id="pv-form" action="https://formspree.io/f/xbdaopgz" method="POST">
+                    <input type="hidden" name="_subject" value="KOSTENLOSE Ratgeber-Anforderung">
 
-                <div style="margin-bottom: 20px;">
-                    <label style="display: block; margin-bottom: 5px; font-weight: bold;">Telefonnummer (für Fachpartner-Angebot):</label>
-                    <input type="tel" name="phone" required style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 6px; box-sizing: border-box;">
-                </div>
+                    <div>
+                        <label>Vor- und Nachname:</label>
+                        <input type="text" name="Name" placeholder="Ihr Name" required>
+                    </div>
+                    <div>
+                        <label>E-Mail Adresse:</label>
+                        <input type="email" name="Email" placeholder="ihre@mail.de" required>
+                    </div>
+                    <div>
+                        <label>Telefonnummer:</label>
+                        <input type="tel" name="Telefon" placeholder="Für Rückfragen zum Projekt" required>
+                    </div>
+                    <div>
+                        <label>Beste Erreichbarkeit:</label>
+                        <select name="Erreichbarkeit">
+                            <option value="Vormittags">Vormittags</option>
+                            <option value="Mittags">Mittags</option>
+                            <option value="Nachmittags">Nachmittags</option>
+                            <option value="Abends">Abends</option>
+                        </select>
+                    </div>
 
-                <button type="submit" style="width: 100%; padding: 18px; background-color: #e67e22; color: white; border: none; border-radius: 6px; font-weight: bold; cursor: pointer; font-size: 1.1em;">
-                    RATGEBER JETZT GRATIS ANFORDERN
-                </button>
-            </form>
-            <p style="font-size: 0.8em; color: #7f8c8d; margin-top: 15px; text-align: center;">
-                Durch das Absenden stimmen Sie der Weitergabe Ihrer Daten an einen PV-Fachpartner zu.
-            </p>
-        </section>
-    </main>
+                    <div class="full-width">
+                        <label>Objekt-Adresse:</label>
+                        <input type="text" name="Adresse" placeholder="Straße, Hausnummer, PLZ, Ort" required>
+                    </div>
+                    
+                    <div>
+                        <label>Sind Sie Hausbesitzer?</label>
+                        <select name="Hausbesitzer" required>
+                            <option value="">-- Bitte wählen --</option>
+                            <option value="Ja">Ja, ich bin Eigentümer</option>
+                            <option value="Nein">Nein (Mieter)</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label>Jahresstromverbrauch (ca. kWh):</label>
+                        <input type="number" name="Stromverbrauch" placeholder="z.B. 4500">
+                    </div>
 
-    <footer style="text-align: center; padding: 30px; color: #7f8c8d; font-size: 0.9em; background: #f4f7f9;">
-        <p>&copy; 2026 KI4YOU - Fachportal für Photovoltaik</p>
-    </footer>
+                    <div class="full-width">
+                        <label>Ihre Anmerkung zum Projekt (optional):</label>
+                        <textarea name="Nachricht" rows="3" placeholder="Gibt es Besonderheiten?"></textarea>
+                    </div>
 
+                    <button type="submit" id="submit-btn" class="btn-submit">JETZT KOSTENLOS ANFORDERN</button>
+                    <p id="status" style="display:none; color: #d4af37;">Wird gesendet... Bitte warten.</p>
+                </form>
+            </div>
+        </main>
+    </div>
+
+    <div class="footer">
+        &copy; 2026 KI-Anwendungen4You - Roberto Serb
+    </div>
+
+    <script>
+        const form = document.getElementById("pv-form");
+        const status = document.getElementById("status");
+        const btn = document.getElementById("submit-btn");
+
+        form.addEventListener("submit", async function(event) {
+            event.preventDefault(); 
+            btn.disabled = true;
+            btn.innerText = "WIRD GESENDET...";
+            status.style.display = "block";
+            
+            const data = new FormData(event.target);
+            
+            fetch(event.target.action, {
+                method: form.method,
+                body: data,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    // Erfolgreich gesendet -> Weiterleitung zur geheimen Seite
+                    window.location.href = "dein-pv-ratgeber-download.html";
+                } else {
+                    status.innerHTML = "Fehler: Bitte prüfen Sie Ihre Eingaben.";
+                    btn.disabled = false;
+                    btn.innerText = "JETZT KOSTENLOS ANFORDERN";
+                }
+            }).catch(error => {
+                status.innerHTML = "Verbindungsfehler. Bitte versuchen Sie es später erneut.";
+                btn.disabled = false;
+                btn.innerText = "JETZT KOSTENLOS ANFORDERN";
+            });
+        });
+    </script>
 </body>
 </html>
 
