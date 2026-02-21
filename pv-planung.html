@@ -14,48 +14,31 @@
         nav ul li { margin-bottom: 1rem; }
         nav ul li a { color: #eeeeee; text-decoration: none; font-weight: bold; }
         nav ul li a:hover { color: #d4af37; }
-
         .content { flex: 1; padding: 2rem; background: #1a1a1a; }
         .container-box { background: #222; padding: 2.5rem; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.5); border: 1px solid #333; }
-        
         h2 { color: #d4af37; margin-top: 0; font-size: 1.8rem; }
         .benefit-list { background: #2a2a2a; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0; border-left: 4px solid #d4af37; }
         .benefit-list ul { margin: 0; padding-left: 1.2rem; color: #ccc; }
         .benefit-list li { margin-bottom: 0.5rem; }
-
         .highlight-box { background: rgba(212, 175, 55, 0.1); border: 1px solid #d4af37; padding: 1rem; border-radius: 8px; margin: 1.5rem 0; text-align: center; color: #d4af37; font-weight: bold; }
-
         form { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; margin-top: 2rem; background: #2a2a2a; padding: 2rem; border-radius: 8px; border: 1px solid #444; }
         .full-width { grid-column: span 2; }
-        
         label { font-weight: bold; color: #d4af37; margin-bottom: 0.2rem; display: block; }
         input, textarea, select { width: 100%; padding: 0.8rem; border-radius: 5px; border: 1px solid #444; background: #1a1a1a; color: #fff; font-size: 1rem; box-sizing: border-box; }
         input:focus, select:focus, textarea:focus { border-color: #d4af37; outline: none; }
-        
         .btn-submit { grid-column: span 2; background: #d4af37; color: #1a1a1a; padding: 1.5rem; border: none; border-radius: 5px; font-weight: 900; cursor: pointer; font-size: 1.5rem; text-transform: uppercase; transition: transform 0.2s, background 0.3s; margin-top: 1rem; }
         .btn-submit:hover { background: #b8962e; transform: scale(1.02); }
         .btn-submit:disabled { background: #555; cursor: not-allowed; }
-
         #status { text-align: center; grid-column: span 2; font-weight: bold; margin-top: 10px; }
-
         .footer { text-align: center; padding: 2rem; font-size: 0.9rem; color: #666; border-top: 1px solid #444; }
-        
-        @media (max-width: 768px) { 
-            .main-wrapper { flex-direction: column; } 
-            nav { width: 100%; border-right: none; border-bottom: 1px solid #444; }
-            form { grid-template-columns: 1fr; }
-            .full-width { grid-column: span 1; }
-            .btn-submit { grid-column: span 1; font-size: 1.2rem; }
-        }
+        @media (max-width: 768px) { .main-wrapper { flex-direction: column; } nav { width: 100%; border-right: none; border-bottom: 1px solid #444; } form { grid-template-columns: 1fr; } .full-width { grid-column: span 1; } .btn-submit { grid-column: span 1; font-size: 1.2rem; } }
     </style>
 </head>
 <body>
-
     <header>
         <h1>PV-Planung & Experten-Wissen</h1>
         <p>Sichern Sie sich wertvolle Planungssicherheit für Ihr Projekt</p>
     </header>
-
     <div class="main-wrapper">
         <nav>
             <h3>Navigation</h3>
@@ -67,29 +50,24 @@
                 <li><a href="impressum.html">⚖️ Impressum</a></li>
             </ul>
         </nav>
-
         <main class="content">
             <div class="container-box">
-                <h2>📉 Stromkosten senken & Autarkie steigern</h2>
-                <p>Machen Sie sich unabhängig von steigenden Energiepreisen. Sichern Sie sich unseren <strong>PV-Insider-Ratgeber 2026</strong> und erfahren Sie, worauf es bei einer modernen Solarlösung wirklich ankommt.</p>
-                
-                <div class="highlight-box">
-                    AKTION: Die nächsten 100 Anfragen erhalten den Ratgeber (Wert: 19,90 €) komplett KOSTENLOS!
-                </div>
-
+                <h2>Der PV-Expertenratgeber 2026: In 11 Kapiteln zur optimalen Anlage</h2>
+                <p>Vermeiden Sie teure Planungsfehler und setzen Sie auf echte Kosteneffizienz. Erfahren Sie in 11 Fachkapiteln, wie Sie Ihr Projekt zum Erfolg führen:</p>
                 <div class="benefit-list">
                     <ul>
-                        <li><strong>Eigenverbrauch optimieren:</strong> Wie Sie mehr von Ihrem eigenen Strom nutzen.</li>
-                        <li><strong>Zukunftssicherheit prüfen:</strong> Worauf Sie beim Wechselrichter und Speicher achten müssen.</li>
-                        <li><strong>Angebote vergleichen:</strong> Mit unserer Checkliste erkennen Sie sofort die Qualität technischer Komponenten.</li>
+                        <li><strong>Kapitel 1-4:</strong> Profitabilität, Speicher-Check & Komponenten-Qualität.</li>
+                        <li><strong>Kapitel 5-8:</strong> Wechselrichter-Technik, Steuern 2026 & Eigenverbrauch.</li>
+                        <li><strong>Kapitel 9-11:</strong> Anbieter-Falle vermeiden, Finanzierung & Wartung.</li>
+                        <li><strong>Bonus:</strong> Exklusive Checklisten für Ihre Planungssicherheit.</li>
                     </ul>
                 </div>
-
-                <p>Fordern Sie Ihr persönliches Exemplar jetzt über dieses Formular <strong>kostenfrei</strong> an:</p>
-                
+                <div class="highlight-box">
+                    ENTSCHEIDUNG: Wählen Sie den Gratis-Download (Variante A) über das Formular oder den diskreten Kauf via Amazon (Variante B, 19,99 €).
+                </div>
+                <p>Fordern Sie Ihr persönliches Exemplar jetzt <strong>kostenfrei</strong> an (inkl. unverbindlichem Angebot durch Fachpartner):</p>
                 <form id="pv-form" action="https://formspree.io/f/xbdaopgz" method="POST">
                     <input type="hidden" name="_subject" value="KOSTENLOSE Ratgeber-Anforderung">
-
                     <div>
                         <label>Vor- und Nachname:</label>
                         <input type="text" name="Name" placeholder="Ihr Name" required>
@@ -111,12 +89,10 @@
                             <option value="Abends">Abends</option>
                         </select>
                     </div>
-
                     <div class="full-width">
                         <label>Objekt-Adresse:</label>
                         <input type="text" name="Adresse" placeholder="Straße, Hausnummer, PLZ, Ort" required>
                     </div>
-                    
                     <div>
                         <label>Sind Sie Hausbesitzer?</label>
                         <select name="Hausbesitzer" required>
@@ -129,45 +105,35 @@
                         <label>Jahresstromverbrauch (ca. kWh):</label>
                         <input type="number" name="Stromverbrauch" placeholder="z.B. 4500">
                     </div>
-
                     <div class="full-width">
                         <label>Ihre Anmerkung zum Projekt (optional):</label>
                         <textarea name="Nachricht" rows="3" placeholder="Gibt es Besonderheiten?"></textarea>
                     </div>
-
                     <button type="submit" id="submit-btn" class="btn-submit">JETZT KOSTENLOS ANFORDERN</button>
                     <p id="status" style="display:none; color: #d4af37;">Wird gesendet... Bitte warten.</p>
                 </form>
             </div>
         </main>
     </div>
-
     <div class="footer">
         &copy; 2026 KI-Anwendungen4You - Roberto Serb
     </div>
-
     <script>
         const form = document.getElementById("pv-form");
         const status = document.getElementById("status");
         const btn = document.getElementById("submit-btn");
-
         form.addEventListener("submit", async function(event) {
             event.preventDefault(); 
             btn.disabled = true;
             btn.innerText = "WIRD GESENDET...";
             status.style.display = "block";
-            
             const data = new FormData(event.target);
-            
             fetch(event.target.action, {
                 method: form.method,
                 body: data,
-                headers: {
-                    'Accept': 'application/json'
-                }
+                headers: { 'Accept': 'application/json' }
             }).then(response => {
                 if (response.ok) {
-                    // Erfolgreich gesendet -> Weiterleitung zur geheimen Seite
                     window.location.href = "dein-pv-ratgeber-download.html";
                 } else {
                     status.innerHTML = "Fehler: Bitte prüfen Sie Ihre Eingaben.";
@@ -183,5 +149,3 @@
     </script>
 </body>
 </html>
-
-
